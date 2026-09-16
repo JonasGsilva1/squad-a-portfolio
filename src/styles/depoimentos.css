@@ -1,35 +1,4 @@
-
-
-header {
-  background-color: #ffffff;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.menu h2,
-.menu h3 {
-  font-size: 14px;
-  font-weight: normal;
-}
-
-.menu h2 a,
-.menu h3 {
-  color: #666666;
-  text-decoration: none;
-}
-
-.menu h2 a:hover,
-.menu h3:hover {
-  color: #2563eb;
-  cursor: pointer;
-}
+/* depoimentos.css - Estilos específicos da página Depoimentos */
 
 .testimonials {
   max-width: 1000px;

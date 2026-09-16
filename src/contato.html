@@ -7,17 +7,7 @@
   <link rel="stylesheet" href="styles/contato.css">
 </head>
 <body>
-<header>
-  <div class="menu">
-  <h2><a href="home.html">Home</a><h2>
-  <h2><a href="sobre.html">Sobre</a></h2>
-    <h2><a href="contato.html">Contatos</a></h2>
-    <h2><a href="projetos.html"></a>Projeto</h2>
-    <h2><a href="case-de-sucesso.html"></a> case-de-sucesso </a></h2>
-    <h3>Habilidades e serviço</h3>
-    <h3>Depoimentos</h3>
-  </div>
-</header>  
+<header id="main-header"></header>
 <main>
   <div class="container">
   <div class="logo" id="foto">
@@ -27,6 +17,13 @@
 </a>
   </div>
   </div>
+  <div class="container" style="margin-top: 20px; text-align: center;">
+    <h3>Buscar Contato Rápido (O(1))</h3>
+    <input type="text" id="inputBuscaContato" placeholder="Digite o nome (ex: Jonas)" style="padding: 10px;">
+    <button id="btnBuscarContato" style="padding: 10px;">Buscar</button>
+    <div id="resultadoBusca" style="margin-top: 20px;"></div>
+  </div>
+
 <div class="grid">
     <div class="card">
     <h2>Luiz Fernando</h2>
@@ -73,5 +70,6 @@
 </form>
 </div>
 </main>
+<script src="scripts/main.js"></script>
 </body>
 </html>

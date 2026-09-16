@@ -67,10 +67,11 @@ function renderizarMenu() {
                 <h2><a href="home.html">Home</a></h2>
                 <h2><a href="sobre.html">Sobre</a></h2>
                 <h2><a href="contato.html">Contatos</a></h2>
-                <h2><a href="projetos.html">Projeto</a></h2>
+                <h2><a href="projetos.html">Projetos</a></h2>
                 <h2><a href="case-de-sucesso.html">Case de Sucesso</a></h2>
-                <h3><a href="habilidades.html">Habilidades e Serviço</a></h3>
-                <h3><a href="depoimentos.html">Depoimentos</a></h3>
+                <h2><a href="habilidades.html">Habilidades</a></h2>
+                <h2><a href="servicos.html">Serviços</a></h2>
+                <h2><a href="depoimentos.html">Depoimentos</a></h2>
             </div>
         `;
     }

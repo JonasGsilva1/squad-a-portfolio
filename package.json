@@ -1,0 +1,12 @@
+{
+  "name": "squad-a-portfolio",
+  "version": "1.0.0",
+  "description": "Squad A Portfolio",
+  "main": "src/home.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

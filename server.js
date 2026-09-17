@@ -38,9 +38,9 @@ app.post('/api/chat', async (req, res) => {
             return res.status(500).json({ success: false, error: 'Chave API não configurada no servidor.' });
         }
 
-        // Chama a IA Gemini
-        const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash', // O modelo recomendado (3.7-flash foi mencionado, usaremos 2.5-flash padrão ou a versão atualizada da api)
+        // Chama a IA Gemini usando a API recomendada (Interactions)
+        const response = await ai.interactions.create({
+            model: 'gemini-3.7-flash', 
             contents: message,
         });
 

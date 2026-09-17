@@ -41,13 +41,13 @@ app.post('/api/chat', async (req, res) => {
         // Chama a IA Gemini usando a API recomendada (Interactions)
         const response = await ai.interactions.create({
             model: 'gemini-3.7-flash', 
-            contents: message,
+            input: message,
         });
 
         return res.status(200).json({
             success: true,
             data: {
-                reply: response.text
+                reply: response.output_text
             }
         });
 

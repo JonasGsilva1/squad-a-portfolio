@@ -183,7 +183,12 @@ function injetarChatIA() {
             document.getElementById(typingId).remove();
 
             if (data.success) {
-                messages.insertAdjacentHTML('beforeend', `<div class="chat-msg ai">${data.data.reply}</div>`);
+                // Formata Markdown básico (negrito, itálico e quebra de linha) retornado pelo Gemini
+                const formattedReply = data.data.reply
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                    .replace(/\n/g, '<br>');
+                messages.insertAdjacentHTML('beforeend', `<div class="chat-msg ai">${formattedReply}</div>`);
             } else {
                 messages.insertAdjacentHTML('beforeend', `<div class="chat-msg ai" style="color: red;">Erro: ${data.error}</div>`);
             }

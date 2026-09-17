@@ -38,10 +38,21 @@ app.post('/api/chat', async (req, res) => {
             return res.status(500).json({ success: false, error: 'Chave API não configurada no servidor.' });
         }
 
+        const systemInstruction = `Você é o Assistente Virtual Oficial da Squad A, uma equipe especializada em desenvolvimento de software e criação de portfólios web com alto padrão de qualidade (Clean Code, responsividade e design moderno). 
+Seu papel é recepcionar os visitantes, tirar dúvidas sobre nossos serviços e falar sobre os membros da equipe.
+A equipe é composta por:
+1. Luiz Fernando: Gerente de Projetos. Email: luizfernando@gmail.com, Telefone: (81) 99999-9999.
+2. Joan Antonio: UX/UI Designer. Email: joanjunior91@gmail.com, GitHub: JJzinho.
+3. Jonas Gabriel: Desenvolvedor Front-end. Email: jonasgabriel@gmail.com, Telefone: (81) 99999-9999.
+Sempre que perguntarem sobre eles, forneça essas informações e explique seus papéis de forma simpática e profissional.
+Nossos projetos usam tecnologias modernas como HTML, CSS, JavaScript e integração com IAs (Gemini).
+Seja conciso, amigável, demonstre autoridade técnica e utilize emojis na medida certa.`;
+
         // Chama a IA Gemini usando a API recomendada (Interactions)
         const response = await ai.interactions.create({
             model: 'gemini-3.7-flash', 
             input: message,
+            system_instruction: systemInstruction,
         });
 
         return res.status(200).json({

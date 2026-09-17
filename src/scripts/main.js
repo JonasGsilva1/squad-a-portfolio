@@ -115,27 +115,26 @@ function inicializarPagina() {
 // Aguarda o carregamento completo do DOM antes de inicializar
 document.addEventListener("DOMContentLoaded", inicializarPagina);
 
-
 /**
- * Injeta o widget de Chat com IA na p·gina.
+ * Injeta o widget de Chat com IA na p√°gina.
  * 
- * Cria um bot„o flutuante e uma janela de chat.
- * A lÛgica de envio se comunica com o backend Node.js (Render/Local).
+ * Cria um bot√£o flutuante e uma janela de chat.
+ * A l√≥gica de envio se comunica com o backend Node.js (Render/Local).
  */
 function injetarChatIA() {
     const chatHtml = `
-        <div id="chat-widget-btn" class="chat-widget-btn">??</div>
+        <div id="chat-widget-btn" class="chat-widget-btn">üí¨</div>
         <div id="chat-window" class="chat-window">
             <div class="chat-header">
                 <span>IA Assistente - Squad A</span>
                 <button id="chat-close-btn" class="chat-close-btn">&times;</button>
             </div>
             <div id="chat-messages" class="chat-messages">
-                <div class="chat-msg ai">Ol·! Sou a inteligÍncia artificial da Squad A. Como posso te ajudar hoje?</div>
+                <div class="chat-msg ai">Ol√°! Sou a intelig√™ncia artificial da Squad A. Como posso te ajudar hoje?</div>
             </div>
             <div class="chat-input-area">
-                <input type="text" id="chat-input" placeholder="Digite sua d˙vida...">
-                <button id="chat-send-btn">?</button>
+                <input type="text" id="chat-input" placeholder="Digite sua d√∫vida...">
+                <button id="chat-send-btn">‚û§</button>
             </div>
         </div>
     `;
@@ -158,7 +157,7 @@ function injetarChatIA() {
         const msg = input.value.trim();
         if (!msg) return;
 
-        // Adiciona mensagem do usu·rio
+        // Adiciona mensagem do usu√°rio
         messages.insertAdjacentHTML('beforeend', `<div class="chat-msg user">${msg}</div>`);
         input.value = '';
         messages.scrollTop = messages.scrollHeight;
@@ -190,7 +189,7 @@ function injetarChatIA() {
             }
         } catch (error) {
             document.getElementById(typingId).remove();
-            messages.insertAdjacentHTML('beforeend', `<div class="chat-msg ai" style="color: red;">Erro de conex„o com o servidor.</div>`);
+            messages.insertAdjacentHTML('beforeend', `<div class="chat-msg ai" style="color: red;">Erro de conex√£o com o servidor.</div>`);
         }
         
         messages.scrollTop = messages.scrollHeight;
